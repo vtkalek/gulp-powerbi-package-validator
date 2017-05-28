@@ -159,7 +159,7 @@ gulp.task('checkPackage', 'JSONSchema for package content, [--path PATH] for dif
 });
 
 gulp.task('clean', 'Remove temp package directory ' + TEMP_FOLDER, function() {
-	return del.sync([TEMP_FOLDER]);
+	return del.sync([TEMP_FOLDER], {force: true} );
 });
 
 gulp.task('checkValidState', 'Checking of package state (valid or invalid). Should be the lastest task in tasks pipline', function() {
